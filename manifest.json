@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://yuanbao.tencent.com/*"
+        "*://*.tencent.com/api/chat/*"
       ],
       "js": [
         "./content.js"
