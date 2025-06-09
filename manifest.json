@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.yoururl.com/*"
+        "*://yuanbao.tencent.com/*"
       ],
       "js": [
         "./content.js"
