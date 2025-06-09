@@ -12,11 +12,13 @@
     };
 
     XHR.send = function (postData) {
+        if (this._url.indexOf('api/chat') !== -1) {
         console.log('injected script xhr request:', this._method, this._url, this.getAllResponseHeaders(), postData);
         this.addEventListener('load', function () {
             window.postMessage({ type: 'xhr', data: this.response }, '*');  // send to content script
         });
         return send.apply(this, arguments);
+        }
     };
 })(XMLHttpRequest);
 
